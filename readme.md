@@ -10,6 +10,6 @@
 - 장효림
 ## 저장소 이용 방법
 1. 각자 본인 이름의 branch를 만들어주세요
-2. 테스트를 완료한 후 branch에 우선적으로 commit 해주세요
-3. pull request 하시면서 code reviwer에 팀원들을 추가해주시면 됩니다
-
+2. 각자 본인 이름의 Directory를 만들어주시고, 소스코드를 저장해주세요
+3. 테스트를 완료한 후 branch에 우선적으로 commit 해주세요
+4. pull request 하시면서 comment에 답장을 주시면 됩니다
