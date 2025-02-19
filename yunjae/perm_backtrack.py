@@ -1,3 +1,6 @@
+# 백준 15654: N과 M(5)
+# https://www.acmicpc.net/problem/15654
+
 import sys
 input = sys.stdin.readline
 
@@ -10,7 +13,7 @@ numbers.sort() # 정렬
 def perm(depth):
   # 재귀 탈출 조건
   if depth == m:
-    print(ans*) # 아니면 print(' '.join(map(str, ans)))
+    print(*ans) # 리스트 앞의 *은 unpacking 역할을 한다. 아니면 print(' '.join(map(str, ans)))
     return
   
   # 빈 리스트나 0으로 초기화된 정답 리스트에 숫자를 넣어줌
