@@ -41,9 +41,9 @@ def solution(n, k, cmd):
         elif c == "Z":
             prev, idx, next = del_stack.pop()
             answer[idx] = 'O'
-            if next==None:                  # 복원된 노드(now)가 마지막 노드라면
+            if next==None:                  # 복원된 노드(idx)가 마지막 노드라면
                 table[prev][1] = idx        # 연결을 회복해 준다
-            elif prev==None:                # 복원된 노드(now)가 첫번째 노드여도 마찬가지
+            elif prev==None:                # 복원된 노드(idx)가 첫번째 노드여도 마찬가지
                 table[next][0] = idx
             else:                           # 복원된 노드가 처음도 끝도 아니더라도 마찬가지
                 table[next][0] = idx
