@@ -1,3 +1,8 @@
+# 프로그래머스: 길찾기 게임 (2019 카카오 블라인드 채용 문제)
+# https://school.programmers.co.kr/learn/courses/30/lessons/42892
+
+# 파이썬에서의 이진트리 구현과 관련된 문제를 찾다가, 가장 보편적이고 직관적인 풀이를 익힌다는 생각으로 본 문제를 선택함.
+
 import sys
 sys.setrecursionlimit(10**6) # 재귀 시 시간초과 방지를 위해
 
