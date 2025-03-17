@@ -1,3 +1,6 @@
+# 프로그래머스 - 양과 늑대 (2022 카카오 블라인드 채용)
+# https://school.programmers.co.kr/learn/courses/30/lessons/92343
+
 def solution(info, edges):
     visited = [0] * len(info) # 방문한 노드들 기록
     answer = []
