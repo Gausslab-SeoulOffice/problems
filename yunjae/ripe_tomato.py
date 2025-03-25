@@ -9,6 +9,7 @@ from collections import deque
 def BFS(r, c):
   r, c = queue.popleft()
 
+  # delta 탐색
   for d in range(4):
     nr, nc = r + dr[d], c + dc[d]
 
@@ -24,26 +25,22 @@ box = [list(map(int, input().split())) for _ in range(n)]
 dr = [-1, 1, 0, 0]
 dc = [0, 0, -1, 1]
 
-ans = -1 # 토마토가 모두 익지는 않은 경우가 default
-queue = deque()
-
-# 처음에는 익은 토마토가 하나밖에 없다.
+# 익은 토마토가 하나 이상 있을 수 있다.
 # 이를 이용하여 박스 안을 돌며 시작점을 찾는다.
+queue = deque()
 for r in range(n):
   for c in range(m):
     if box[r][c] == 1:
       queue.append((r, c))
 
-while queue:
-  BFS(r, c) # 순회
+BFS(queue)
 
+ans = 0
 # 날짜 구하기
-for line in box:
-  for t in line:
-    if t == 0: # 하나라도 안 익은 토마토가 있으면 종료
-      print(-1)
-      exit(0)
-    else: # 안 익은 토마토가 해당 줄에 없으면 익은 날짜를 갱신
-      ans = max(ans, t)
+for row in box:
+  if 0 in row:
+    print(-1)
+    exit(0)
+  ans = max(ans, max(row))
 
-print(ans - 1) # 익었는지 여부 판단을 위해 1을 더했으므로, 그만큼을 빼야 함
+print(ans - 1) # 처음 익은 토마토(1)에서 시작했으니 1을 빼준다
