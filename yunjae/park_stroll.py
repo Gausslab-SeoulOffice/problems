@@ -31,7 +31,7 @@ def solution(park, routes):
         if all(0 <= ny < N and 0 <= nx < M and park[ny][nx] != 'X' for ny, nx in path):
             y, x = path[-1]
         
-        # 위 두 줄의 코드는 다음과 동일한 효과
+        # 위 세 줄의 코드는 다음과 동일한 효과
 #         ny, nx = y, x
 #         valid_move = True
         
