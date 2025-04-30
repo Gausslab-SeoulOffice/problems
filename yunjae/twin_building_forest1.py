@@ -1,7 +1,6 @@
 # 프로그래머스 - 쌍둥이 빌딩 숲
 # https://school.programmers.co.kr/learn/courses/30/lessons/140105
-# 메모이제이션으로 풀이한다.
-# DP 행렬(memoization table)을 만들어 경우의 수를 저장한다.
+# DP 행렬을 만들어 경우의 수를 저장한다.
 
 # dp[i][i] = 1: 모든 높이의 빌딩들이 다 보이는 경우
 # dp[i][0] = 0: 빌딩이 하나라도 있다면, 빌딩이 안 보일 수는 없음
