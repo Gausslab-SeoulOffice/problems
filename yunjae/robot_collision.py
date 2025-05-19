@@ -1,6 +1,7 @@
 # 프로그래머스 - 로봇 충돌
 # https://school.programmers.co.kr/learn/courses/30/lessons/340211
 # 완전 탐색 문제. 발상은 간단하지만 인덱싱에 주의.
+# defaultdict에 이동 좌표를 저장한 다음 Counter로 층돌 횟수를 집계합니다
 
 from collections import defaultdict, Counter
 
