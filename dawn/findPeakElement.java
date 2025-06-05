@@ -26,7 +26,7 @@ class Solution {
         int left = 0;
         int right = nums.length - 1;
         while (left < right) {
-            int mid = (left + right) / 2;
+            int mid = left + (right - left) / 2;
             if (nums[mid] > nums[mid + 1]) {
                 right = mid;
             } else {
@@ -38,12 +38,14 @@ class Solution {
 }
 
 /***
- * 이 문제는 튀어나온 값을 구하라는 문제이다.
- * 근데 시간 복잡도가 O(log n) 이어야한다.
+ * 이 문제는 꼭대기를 찾으라는 문제이다.
+ * 여러개가 있다면 무엇을 반환해도 상관없다.
  *
- * 일단 오른쪽 왼쪽을 나눠서 생각하면 된다.
- * 중앙값을 찾아서 그 값이 다음값보다 크면 right를 내값까지 가지고 오는거고,
- * 그게 아니면 반대로 중앙값 다음값이 더 크다는 거니까 left를 중앙값다음값으로 가지고 오면된다.
- * 그렇게 반복하다보면 left<right 이 조건이 끝나는 지점이 있을것이다.
- * 그때 left를 반환하면 솟아오른 값이 반환된다.
+ * 일단 중간부터 탐색할 예정이다.
+ * 가운데를 찾아서 그 다음에 있는 숫자랑 비교한다.
+ * 가운데 숫자가 더 크면 일단 오른쪽보다는 크다는 의미이기에 왼쪽보다 크기만 하면 꼭대기임을 증명하는 것이다.
+ * 그렇기에 오른쪽을 mid로 옮겨서 확인하면 된다.
+ * 내리막(peak이 왼쪽에 있음): nums[mid] > nums[mid+1] → right = mid
+ * 오르막(peak이 오른쪽에 있음): nums[mid] < nums[mid+1] → left = mid + 1
+ * 이러다가 left == right가 되는 순간 그 곳이 꼭대기라는 것이다.
  */
