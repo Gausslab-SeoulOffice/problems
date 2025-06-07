@@ -40,7 +40,3 @@ def solution(tickets):
     paths.sort()
     
     return paths[0]
-                
-                
-        
-    return answer
