@@ -11,7 +11,8 @@ def solution(food_times, k):
         return -1
     
     length = len(food_times)
-    
+
+    # 우선순위 큐
     Q = []
     for i in range(length):
         hq.heappush(Q, (food_times[i], i+1))   # (음식 시간, 인덱스 번호)
