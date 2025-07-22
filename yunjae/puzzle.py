@@ -2,6 +2,7 @@
 # https://www.acmicpc.net/problem/1525
 # BFS를 이용한 풀이입니다 (퍼즐의 답이 정해져 있음에 주의)
 
+
 import sys
 from collections import deque
 input = sys.stdin.readline
